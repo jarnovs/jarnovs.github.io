@@ -96,9 +96,9 @@ function scrollToBottom() {
     chatContainer.scrollTop = chatContainer.scrollHeight;
 }
 
-document.addEventListener("click", function () {
-    deleteAllMessages.classList.remove("active");
-});
+// document.addEventListener("click", function () {
+//     deleteAllMessages.classList.remove("active");
+// });
 
 function deleteAllMessages() {
     if (!currentContact) return;
