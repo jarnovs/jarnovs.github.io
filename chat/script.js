@@ -25,26 +25,29 @@ renderContacts();
 let currentContact = null;
 
 // Загружаем контакты
-document.addEventListener("DOMContentLoaded", function () {
-    const contactButtons = document.querySelectorAll(".contact");
-    contactButtons.forEach((button) => {
-        button.addEventListener("click", function () {
-            const contactName = this.querySelector(".contact_name").innerText;
-            currentContact = contactName;
-            displayMessages(contactName);
+export function addContactListener() {
+    document.addEventListener("DOMContentLoaded", function () {
+        const contactButtons = document.querySelectorAll(".contact");
+        contactButtons.forEach((button) => {
+            button.addEventListener("click", function () {
+                const contactName = this.querySelector(".contact_name").innerText;
+                currentContact = contactName;
+                displayMessages(contactName);
+            });
         });
-    });
 
-    addButton.addEventListener("click", addMessage);
-    messageInput.addEventListener("keydown", function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            addMessage();
-        }
-    });
+        addButton.addEventListener("click", addMessage);
+        messageInput.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                addMessage();
+            }
+        });
 
-    deleteAllButton.addEventListener("click", deleteAllMessages);
-});
+        deleteAllButton.addEventListener("click", deleteAllMessages);
+    });
+};
+addContactListener();
 
 // Функция для сохранения сообщений в localStorage
 function saveMessage(contact, sender, text) {
