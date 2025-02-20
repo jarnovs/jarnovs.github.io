@@ -7,7 +7,9 @@
 		<!-- Font awesome -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" >
         <!-- JavaScript -->
-        <script src="./script.js" defer></script>
+        <script src="./script.js" type="module" defer></script>
+        <script src="./scripts/search.js" type="module" defer></script>
+        <script src="./scripts/signOutButton.js" defer></script>
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="styles/general.css">
         <link rel="stylesheet" type="text/css" href="styles/left_container.css">
@@ -32,46 +34,13 @@
         <!-- Seacher -->
         <div class="search_header">
             <i class="fa fa-search" style="position: absolute; top: 50%; left: 8px; transform: translateY(-50%);"></i>
-            <input type="text" placeholder="Search people">
+            <input type="text" class="js-input" placeholder="Search people">
         </div>
         
         <!-- Contacts -->
         <div class="contacts_container">
             <h2 id="chats">CHATS</h2>
-            <ul class="scroll">
-                <button>
-                    <div class="contact">
-                        <div class="contact_image">
-                            <img src="/images/adil.jpg" alt="">
-                        </div>
-                        <div class="text-in-contact">
-                            <p class="contact_name">Adil</p>
-                            <p class="about_contact">I am lol</p>
-                        </div>
-                    </div>
-                </button>
-                <button>
-                    <div class="contact">
-                        <div class="contact_image">
-                            <img src="/images/daniyar.jpg" alt="">
-                        </div>
-                        <div class="text-in-contact">
-                            <p class="contact_name">Daniyar</p>
-                            <p class="about_contact">I am the best</p>
-                        </div>
-                    </div>
-                </button>
-                <button>
-                    <div class="contact">
-                        <div class="contact_image">
-                            <img src="/images/dim_agai.jpg" alt="">
-                        </div>
-                        <div class="text-in-contact">
-                            <p class="contact_name">Dim Agai</p>
-                            <p class="about_contact">I like you</p>
-                        </div>
-                    </div>
-                </button>
+            <ul class="scroll js-scroll">
             </ul>
         </div>
 
@@ -79,8 +48,9 @@
         <div class="profile_container">
             <div class="profile_btn">
                 <img id="profile_logo" src="/images/we.jpg" alt="profile">
+                <span class="nickname">Fronter</span>
             </div>
-            <button class="sign_out_btn">
+            <button class="sign_out_btn js-sign_out_btn">
                 <img id="sign_out_logo" src="/images/sign_out.png" alt="sign out">
             </button>
         </div>
@@ -91,57 +61,22 @@
         <div class="chat_header">
             <div class="current_user">
                 <div class="current_user_logo">
-                    <img src="/images/dim_agai.jpg" alt="">
+                    <img src="/images/logo.jpg" alt="">
                 </div>
                 <div class="current_user_name">
-                    <p>Dim Agai</p>
+                    <p>Home page</p>
                 </div>
             </div>
             <div class="more_btn">
-                <img src="/images/ellipsis-vertical-solid.svg" id="ellipsisIcon" alt="">
                 <div class="more" id="deleteAllButton">Delete All</div>
+                <img src="/images/ellipsis-vertical-solid.svg" id="ellipsisIcon" alt="">
+
             </div> 
         </div>
 
         <!-- Chat -->
         <ul class="contact-chat_container" id="messageList">
-            <div class="my-message_container">
-                <p>Hello, we made site for you</p>
-                <img src="/images/we.jpg" alt="">
-            </div>
-            <div class="contact-message_container">
-                <img src="/images/dim_agai.jpg" alt="">
-                <p>Hi, good. I wanna see this site. Can you send repository!
-                    I will check it.</p>
-            </div>
-            <div class="my-message_container">
-                <p>Here is a link to our repository:
-                    https://github.com/SinJeIwc/todorite/tree/main</p>
-                <img src="/images/we.jpg" alt="">
-            </div>
-            <div class="contact-message_container">
-                <img src="/images/dim_agai.jpg" alt="">
-                <p>Wow. What a cool project. Amazing, you guys are great!
-                    Keep up the good work!
-                    Absolute</p>
-            </div>
-            <div class="my-message_container">
-                <p>Thank you. 
-                    We worked very hard on the project. 
-                    We are glad that you liked it.</p>
-                <img src="/images/we.jpg" alt="">
-            </div>
-            <div class="contact-message_container">
-                <img src="/images/dim_agai.jpg" alt="">
-                <p>Add a backend here and this will be the best project! 
-                    The future is yours guys</p>
-            </div>
-            <div class="my-message_container">
-                <p>Can't wait for the next time!</p>
-                <img src="/images/we.jpg" alt="">
-            </div>
         </ul>
-        
         
         <!-- Input -->
         <div class="input_container">
@@ -154,10 +89,7 @@
                     <img src="/images/send.svg" alt="" width="25" height="25">
                 </button>
             </div>
-            
         </div>
     </section>
-    
-
 </body>
 </html>
