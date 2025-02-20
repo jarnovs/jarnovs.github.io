@@ -94,10 +94,10 @@ function addMessage() {
     scrollToBottom()
 }
 
-// function scrollToBottom() {
-//     const chatContainer = document.getElementById("messageList");
-//     chatContainer.scrollTop = chatContainer.scrollHeight;
-// }
+function scrollToBottom() {
+    const chatContainer = document.getElementById("messageList");
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+}
 
 document.addEventListener("click", function () {
     deleteAllMessages.classList.remove("active");
